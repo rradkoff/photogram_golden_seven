@@ -1,0 +1,29 @@
+<div class="page-header">
+  <h1>Edit photo</h1>
+</div>
+
+<form action="/update_photo/<%= @photo.id %>" class="form-horizontal">
+  <!-- Label and input for caption -->
+  <div class="form-group">
+    <label for="caption" class="col-sm-2 control-label">
+      Caption:
+    </label>
+      <input type="text" id="caption" name="caption" placeholder="Caption" class="form-control" value="<%= @photo.caption %>">
+    </div>
+  </div>
+
+    <!-- Label and input for Image URL -->
+  <div class="form-group">
+    <label for="image_url" class="col-sm-2 control-label">
+      Image URL:
+    </label>
+      <input type="text" id="source" name="source" placeholder="Source" class="form-control" value="<%= @photo.source %>">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <input type="submit" value="Update Photo" class="btn btn-primary">
+    </div>
+  </div>
+</form>
